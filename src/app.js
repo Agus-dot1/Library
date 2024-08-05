@@ -104,7 +104,6 @@ theme.addEventListener("click", function () {
 const loader = document.querySelector('.loader');
 loader.addEventListener("animationend", (event) => {
     if (event.animationName === "loaderHide") {
-        // Eliminamos el elemento 'loader' del DOM
         document.body.removeChild(loader);
     }
 });
