@@ -79,3 +79,27 @@ addWrapper.addEventListener('click', () => {
     arrowLeft.classList.remove('animate-bounce-left');
     arrowRight.classList.remove('animate-bounce-right');
 });
+
+
+// theme
+var theme = document.querySelector(".theme");
+
+theme.addEventListener("click", function () {
+    document.documentElement.classList.toggle("dark");
+    if (document.documentElement.classList.contains("dark")) {
+        theme.classList.remove("fa-moon");
+        theme.classList.add("fa-sun");
+        theme.classList.add("text-white");
+    } else {
+        theme.classList.remove("fa-sun");
+        theme.classList.add("fa-moon");
+        theme.classList.remove("text-white");
+        theme.classList.add("text-sky-950");
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      document.querySelector(".loader").classList.add("animate-loader-hide");
+    }, 500);
+  });

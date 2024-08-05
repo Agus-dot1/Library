@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: ["./src/*.{html,js}"],
   theme: {
     extend: {
@@ -8,7 +9,9 @@ module.exports = {
       },
       animation: {
         'bounce-left': 'bounceLeft 1s infinite ease-in-out',
-        'bounce-right': 'bounceRight 1s infinite ease-in-out',  
+        'bounce-right': 'bounceRight 1s infinite ease-in-out',
+        'loader-opacity': 'loaderOpacity .2s ease-in',
+        'loader-hide': 'loaderHide 1.5s ease-in forwards',  
       },
       keyframes: {
         bounceLeft: {
@@ -18,6 +21,14 @@ module.exports = {
         bounceRight: {
           '0%, 100%': { transform: 'translateX(-5px)' },
           '50%': { transform: 'translateX(5px)' },
+        },
+        loaderOpacity: {
+          '0%': { opacity: 0 },
+          '50%': { opacity: 1 },
+        },
+        loaderHide: {
+          '0%': { transform: 'translateY(0)'},
+          '100%': { transform: 'translateY(-100vh)'},
         },
       },
     },
