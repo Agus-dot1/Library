@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/94a7007d05.js" crossorigin="anonymous"></script>
+    <title>Library</title>
+</head>
+
+<body class="w-screen h-full overflow-scroll overflow-x-hidden font-body">
+    <header>
+        <nav class="flex items-center justify-between p-6 px-8 mx-auto max-w-7xl" aria-label="Global">
+            <div class="flex flex-1">
+                <a href="#"><i class="text-2xl fa-solid fa-book text-sky-950"></i></a>
+            </div>
+            <div>
+                <button class="text-3xl font-semibold leading-6 add-book-btn text-sky-950">Add book</button>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="flex justify-end flex-1">
+                <button id="search-btn" class="text-lg font-semibold leading-6 text-sky-950"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </nav>
+    </header>
+    <main id="books" class="max-w-6xl mx-auto mt-10">
+        <section class="grid grid-cols-1 gap-4 books-container auto-rows-fr sm:grid-cols-2 md:grid-cols-3">
+            <div class="flex-col justify-between hidden p-6 bg-white border border-gray-200 rounded-lg shadow book-template">
+                <div class="book-info">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900">Book Title</h5>
+                    <p class="mb-3 text-2xl font-normal text-gray-700">Author</p>
+                    <p class="mb-3 font-normal text-gray-700">Description</p>
+                </div>
+                <div class="flex justify-between">
+                    <button class="text-lg font-semibold leading-6 edit-btn text-sky-950">Edit</button>
+                    <button class="text-lg font-semibold leading-6 delete-btn text-sky-950">Delete</button>
+                </div>
+            </div>
+            <div id="example" class="flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow book">
+                <div class="book-info">
+                    <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900">Historias de cronopios y de famas
+                    </h5>
+                    <p class="mb-3 text-2xl font-normal text-gray-700">Julio Cortázar</p>
+                    <p class="mb-3 font-normal text-gray-700">Historias de cronopios y de famas es una obra fantástica
+                        del escritor argentino Julio Cortázar publicada en 1962 por la Editorial Minotauro. Esta obra se
+                        caracteriza esencialmente por ser escrita a base de fragmentos, microrrelatos y con un
+                        surrealismo que conlleva al desarrollo de la imaginación.</p>
+                </div>
+                <div class="flex justify-between">
+                    <button class="text-lg font-semibold leading-6 delete-btn text-sky-950">Delete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="fixed font-semibold leading-6 opacity-85 max-w-fit bottom-2 left-5 text-1xl text-sky-950">Developed
+        by AdeO</footer>
+    <script src="/src/app.js"></script>
+</body>
+
+</html>
