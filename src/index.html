@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- agregar loader y el tema oscuro -->
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +12,26 @@
     <title>Library</title>
 </head>
 
-<body class="w-screen h-full overflow-scroll overflow-x-hidden font-body">
+<body class="w-screen h-full px-8 overflow-scroll overflow-x-hidden font-body">
     <header>
         <nav class="flex items-center justify-between p-6 px-8 mx-auto max-w-7xl" aria-label="Global">
             <div class="flex flex-1">
                 <a href="#"><i class="text-2xl fa-solid fa-book text-sky-950"></i></a>
             </div>
-            <div>
+            <div class="addWrapper animate-bounce active:scale-105">
+                <i class="mr-2 fa-solid animate-bounce-right fa-arrow-right-long"></i>
                 <button class="text-3xl font-semibold leading-6 add-book-btn text-sky-950">Add book</button>
-                <i class="fa-solid fa-plus"></i>
+                <i class="ml-2 fa-solid animate-bounce-left fa-arrow-left-long"></i>
             </div>
             <div class="flex justify-end flex-1">
-                <button id="search-btn" class="text-lg font-semibold leading-6 text-sky-950"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
+                    <i class="text-3xl fa-solid fa-moon text-sky-950"></i>
             </div>
         </nav>
     </header>
-    <main id="books" class="max-w-6xl mx-auto mt-10">
-        <section class="grid grid-cols-1 gap-4 books-container auto-rows-fr sm:grid-cols-2 md:grid-cols-3">
-            <div class="flex-col justify-between hidden p-6 bg-white border border-gray-200 rounded-lg shadow book-template">
+    <main id="books">
+        <section class="grid grid-cols-1 gap-4 p-6 mx-auto mt-10 max-w-7xl sm:px-8 books-container auto-rows-fr sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div
+                class="flex-col justify-between hidden p-6 duration-75 transform bg-white border border-gray-200 rounded-lg shadow min-h-96 motion-safe:hover:scale-105 book-template">
                 <div class="book-info">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900">Book Title</h5>
                     <p class="mb-3 text-2xl font-normal text-gray-700">Author</p>
@@ -38,7 +42,8 @@
                     <button class="text-lg font-semibold leading-6 delete-btn text-sky-950">Delete</button>
                 </div>
             </div>
-            <div id="example" class="flex flex-col justify-between p-6 bg-white border border-gray-200 rounded-lg shadow book">
+            <div id="example"
+                class="flex flex-col justify-between p-6 duration-75 transform bg-white border border-gray-200 rounded-lg shadow min-h-96 motion-safe:hover:scale-105 book">
                 <div class="book-info">
                     <h5 class="mb-2 text-3xl font-bold tracking-tight text-gray-900">Historias de cronopios y de famas
                     </h5>
@@ -54,7 +59,7 @@
             </div>
         </section>
     </main>
-    <footer class="fixed font-semibold leading-6 opacity-85 max-w-fit bottom-2 left-5 text-1xl text-sky-950">Developed
+    <footer class="fixed font-semibold rotate-90 footer opacity-85 max-w-fit bottom-20 -left-10 text-1xl text-sky-950 lg:rotate-0 lg:bottom-2 lg:left-2">Developed
         by AdeO</footer>
     <script src="/src/app.js"></script>
 </body>

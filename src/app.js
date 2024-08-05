@@ -2,6 +2,10 @@ const addBookBtn = document.querySelector('.add-book-btn');
 const bookTemplate = document.querySelector('.book-template');
 const bookContainer = document.querySelector('.books-container');
 
+const searchBtn = document.querySelector('#search-btn');
+const searchInput = document.querySelector('#search-input');
+const searchResults = document.querySelector('#search-results');
+
 const myLibrary = [];
 let exampleBookDeleted = false;  // Flag to track if the example book is deleted
 
@@ -43,14 +47,14 @@ function displayBooks() {
 function editBook(index) {
     const book = myLibrary[index];
     // Replace these prompts with a form in the UI in a real application
-    const newTitle = prompt(book.title);
-    const newAuthor = prompt(book.author);
-    const newDescription = prompt(book.description);
 
-    if (newTitle && newAuthor && newDescription) {
-        myLibrary[index] = { title: newTitle, author: newAuthor, description: newDescription };
-        displayBooks();
-    }
+    // lapiz al lado de los textos para editarlos individualmente
+    const newTitle = prompt("Edit title:", book.title);
+    const newAuthor = prompt("Edit author:", book.author);
+    const newDescription = prompt("Edit description:", book.description);
+
+    myLibrary[index] = { title: newTitle, author: newAuthor, description: newDescription };
+    displayBooks();
 }
 
 function deleteBook(index) {
@@ -65,3 +69,13 @@ document.querySelector('#example .delete-btn').addEventListener('click', () => {
 
 // Initial display
 displayBooks();
+
+
+const addWrapper = document.querySelector('.addWrapper');
+const arrowLeft = document.querySelector('.fa-arrow-left-long');
+const arrowRight = document.querySelector('.fa-arrow-right-long');
+addWrapper.addEventListener('click', () => {
+    addWrapper.classList.remove('animate-bounce');
+    arrowLeft.classList.remove('animate-bounce-left');
+    arrowRight.classList.remove('animate-bounce-right');
+});
