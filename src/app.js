@@ -98,6 +98,16 @@ theme.addEventListener("click", function () {
     }
 });
 
+
+
+//loader
+const loader = document.querySelector('.loader');
+loader.addEventListener("animationend", (event) => {
+    if (event.animationName === "loaderHide") {
+        // Eliminamos el elemento 'loader' del DOM
+        document.body.removeChild(loader);
+    }
+});
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       document.querySelector(".loader").classList.add("animate-loader-hide");
