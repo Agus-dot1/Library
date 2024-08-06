@@ -101,12 +101,6 @@ theme.addEventListener("click", function () {
 
 
 //loader
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-      document.querySelector(".loader").classList.add("animate-loader-hide");
-    }, 500);
-  });
-  
 const loader = document.querySelector(".loader");
 loader.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {

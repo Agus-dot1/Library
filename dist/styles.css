@@ -906,6 +906,20 @@ select{
   animation: bounceRight 1s infinite ease-in-out;
 }
 
+@keyframes loaderHide{
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(-100vh);
+  }
+}
+
+.animate-loader-hide{
+  animation: loaderHide 1.5s ease-in forwards;
+}
+
 @keyframes loaderOpacity{
   0%{
     opacity: 0;
@@ -1064,6 +1078,10 @@ select{
 
 .delay-1000{
   transition-delay: 1000ms;
+}
+
+.delay-500{
+  transition-delay: 500ms;
 }
 
 .duration-100{
