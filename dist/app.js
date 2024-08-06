@@ -101,9 +101,9 @@ theme.addEventListener("click", function () {
 
 
 //loader
-const loader = document.querySelector(".loader");
-loader.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.querySelector(".loader");
     setTimeout(function() {
-         document.body.removeChild(loader);
-      }, 2000);
+        document.body.removeChild(loader);
+    }, 2000);
 });
