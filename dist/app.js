@@ -109,5 +109,5 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1000);
     setTimeout(function() {
         document.body.removeChild(loader);
-    }, 2500);
+    }, 2000);
 });
