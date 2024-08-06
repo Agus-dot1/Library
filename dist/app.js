@@ -106,8 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(function() {
         loader.classList.add("animate-loader-hide");
-    }, 500);
+    }, 1000);
     setTimeout(function() {
         document.body.removeChild(loader);
-    }, 2000);
+    }, 2500);
 });
