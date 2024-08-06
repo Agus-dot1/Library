@@ -103,6 +103,10 @@ theme.addEventListener("click", function () {
 //loader
 document.addEventListener("DOMContentLoaded", function() {
     const loader = document.querySelector(".loader");
+
+    setTimeout(function() {
+        loader.classList.add("animate-loader-hide");
+    }, 500);
     setTimeout(function() {
         document.body.removeChild(loader);
     }, 2000);
