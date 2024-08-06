@@ -920,20 +920,6 @@ select{
   animation: loaderOpacity .2s ease-in;
 }
 
-@keyframes loaderHide{
-  0%{
-    transform: translateY(0);
-  }
-
-  100%{
-    transform: translateY(-100vh);
-  }
-}
-
-.animate-loader-hide{
-  animation: loaderHide 1.5s ease-in forwards;
-}
-
 .auto-rows-fr{
   grid-auto-rows: minmax(0, 1fr);
 }
