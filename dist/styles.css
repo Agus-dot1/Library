@@ -906,20 +906,6 @@ select{
   animation: bounceRight 1s infinite ease-in-out;
 }
 
-@keyframes loaderHide{
-  0%{
-    transform: translateY(0);
-  }
-
-  100%{
-    transform: translateY(-100vh);
-  }
-}
-
-.animate-loader-hide{
-  animation: loaderHide 1.5s ease-in forwards;
-}
-
 @keyframes loaderOpacity{
   0%{
     opacity: 0;
@@ -932,6 +918,20 @@ select{
 
 .animate-loader-opacity{
   animation: loaderOpacity .2s ease-in;
+}
+
+@keyframes loaderHide{
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(-100vh);
+  }
+}
+
+.animate-loader-hide{
+  animation: loaderHide 1.5s ease-in forwards;
 }
 
 .auto-rows-fr{
@@ -1058,11 +1058,6 @@ select{
 .text-sky-950{
   --tw-text-opacity: 1;
   color: rgb(8 47 73 / var(--tw-text-opacity));
-}
-
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .opacity-85{
