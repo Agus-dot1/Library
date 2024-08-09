@@ -11,7 +11,7 @@ module.exports = {
         'bounce-left': 'bounceLeft 1s infinite ease-in-out',
         'bounce-right': 'bounceRight 1s infinite ease-in-out',
         'loader-opacity': 'loaderOpacity .2s ease-in',
-        'loader-hide': 'loaderHide 1.5s ease-in forwards',  
+        'loader-hide': 'loaderHide 1s ease-in forwards',  
       },
       keyframes: {
         bounceLeft: {
