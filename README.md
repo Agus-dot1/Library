@@ -2,7 +2,7 @@
 
 ## Description
 
-Library is a project developed for The Odin Project. It aims to facilitate the tracking of books that you are currently reading but for now you can't save the information between page reloads.
+Library is a project developed for The Odin Project. It aims to facilitate the tracking of books that you are currently reading but for now you can't save the information between page reloads. You can try it at https://agus-dot1.github.io/Library/
 
 ## Features
 
